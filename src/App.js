@@ -1,13 +1,15 @@
-import HomePage from './homepage-component';
+import React from 'react';
+
+import HomePage from './pages/homepage/homepage-component';
 
 
 import './App.css';
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
       <HomePage />
-    </div>
+    </React.Fragment>
   );
 }
 
