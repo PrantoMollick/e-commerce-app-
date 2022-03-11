@@ -1,20 +1,19 @@
 import React from 'react';
-import HomePage from './pages/homepage/homepage-component';
-
-import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
-const Hats = () => (
-  <div>
-    <h1>Hats Component</h1>
-  </div>
-);
+import HomePage from './pages/homepage/homepage-component';
+import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component';
+
+import './App.css';
 
 function App() {
   return (
+   <>
+   <Header />
     <Routes>
       <Route path='/' element={<HomePage />} />
-      <Route path='/shop/hats' element={<Hats />} />
+      <Route path='/shop' element={<ShopPage />} />
       <Route
       path="*"
       element={
@@ -24,6 +23,7 @@ function App() {
       }
     />
     </Routes>
+   </>
   );
 }
 
